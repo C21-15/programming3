@@ -1,45 +1,68 @@
 <html>
-<body style = "background-color: rgb(9, 104, 116);">
-    <h1> Мої хобі </h1>
-    <section>
-    <ul>
-    <b> Мої хобі: </b>
-    <li> Читання </li>
-    <li> Біг </li>
-    <li> Слухання музики </li>
-    </ul>
-    </section>
+    <head>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
     
-    <section>
-       <h2>Біг</h2>
-            <p>Мені довподоби пробіжки, особливо вранці, бо вайб і прохолоду ранку ні з чим не зрявняти. Кoжен ранок виходження на пробіжок як виклик і поротьба з лінощами. У цій ситуації кайф я отримую після пробіжки від відчуття перемоги над собою. Додатково, фізичні корисні властивості, як прокачка серцевих судин і покращення циркуляції крові по організму. Плюс: біг проганяє сон, але через годину знову спати хочеться, але то вже інша історія.</p>
-    <img src="run1.jpg" width = "400" height="122">
-        </section>
+            /* Style the form container */
+            .form-container {
+                background-color: aliceblue; /* White background for the form */
+                padding: 29px;
+                border-radius: 20px;
+                text-align: center;
+            }
     
-        <section>
-            <h2>Читання</h2>
-            <p>Мені особоливо до вподоби книжки на історичну тему і психологію. Я вважаю, що я прочитав замало, але виправлення ціього казусу є питанням часу. Читання допомагає мені відволіктись від буденного нагромодження і відновити ментальний баланс. Бонусом - нові знання. </p>
-    <img src="reading1.jpg" width = "400" height="122">
-        </section>
-    <section>
-            <h2> Слухання музики</h2>
-    <aside>
-      <p>Я відніс це до хобі, бо у мене за минулий рік в Spotify наслухано 30000 хвилин.</p>
-    </aside>
-    <p> На превеликий жаль, я не вмію грати на якомусь інструменті, але, можливо, у майбутньому освою бас-гітару. Я меломан і слухаю все підряд, але домінуючий жанри - різновиди металу. Мої улюблені гурти: Slipknot, Led Zeppelin, Pixies, Deftones, Alice in Chains. </p>
-    <ul>
-        <li> <a href="https://slipknot1.com/" target="_blank">Slipknot</a></li>
-        <li> <a href="https://www.ledzeppelin.com/?frontpage=true" target="_blank">Led Zeppelin</a></li> </li>
-        <li> <a href="https://aliceinchains.com/" target="_blank">Alice in Chains</a></li>
-        <li> <a href="https://www.deftones.com/" target="_blank">Deftones</a></li>
-        <li> <a href="https://www.pixiesmusic.com/" target="_blank">Pixies</a></li>
-        </ul>
-        <img src="music1.jpg" width = "500" height="500">
-        </section>
-     <footer>
-            <p>&copy; 21-15. Images are without copyright. </p>
-        </footer>
+          
+            label {
+                display: grid; 
+            }
 
-      </body>
-      </html>
+         
     
+            input[type="text"],
+            input[type="email"], input[type="password"] {
+                width: 100%; /* Make inputs take up the full width of their container */
+                padding: 10px; /* Add some padding for better appearance */
+                margin-bottom:10px; /* Add some spacing between inputs */
+            }
+    
+            input[type="submit"] {
+                width: 100%; /* Make submit button take up the full width of its container */
+                padding: 10px;
+                background-color: rgb(9, 104, 116);
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            footer{
+                margin-bottom: auto;
+                text-align: center;
+                
+            }
+        </style>
+    </head>
+    <body style="background-color: rgb(9, 104, 116);">
+        <section class="form-container">
+            <form action="/submit" method="post" target="_blank">
+                <b>Форма для введення особистої інформації</b>
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="surname">Прізвище:</label>
+                <input type="text" id="surname" name="surname" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="pass">Пароль:</label>
+                <input type="password" id="pass" name="pass" required>
+                <input type="submit" value="Надіслати">
+                
+            </form>
+        </section>
+        <footer>
+            <p>&copy; 21-15 </p>
+        </footer>
+    </body>
+    </html>
